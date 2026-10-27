@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Iniciar sesión - Control P.E{% endblock %}
+{% block body_class %}pagina-login{% endblock %}
+{% block content %}
+<div class="login-split">
+    <div class="login-panel-marca">
+        <img src="{{ url_for('static', filename='imagenes/logo/logo.png') }}" alt="Logo Control P.E" class="login-logo">
+        <h2>Control P.E</h2>
+        <p>Seguimiento de prácticas empresariales para estudiantes y docentes.</p>
+        <ul class="login-beneficios">
+            <li>Registra tu bitácora y tu control de horas</li>
+            <li>Consulta tu avance hacia las 864 horas</li>
+            <li>Mantén tus documentos en un solo lugar</li>
+        </ul>
+        <span class="login-pie">Institución Educativa José Joaquín Flórez Hernández · Ibagué</span>
+    </div>
+
+    <div class="login-panel-form">
+        <h1>Bienvenido</h1>
+        <p class="login-sub">Ingresa con tu cuenta para continuar.</p>
+        <form method="POST" autocomplete="off">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" required autofocus autocomplete="off">
+            <label>Contraseña</label>
+            <input type="password" name="password" required autocomplete="new-password">
+            <button class="btn" type="submit" style="width:100%">Ingresar</button>
+        </form>
+        <div class="login-enlaces">
+            <a href="{{ url_for('autenticacion.recuperar_password') }}">¿Olvidaste tu contraseña?</a>
+            <span>
+                ¿Eres estudiante y no tienes cuenta?
+                <a href="{{ url_for('autenticacion.registro') }}">Regístrate aquí</a>
+            </span>
+        </div>
+    </div>
+</div>
+{% endblock %}

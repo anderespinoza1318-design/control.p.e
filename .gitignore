@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.pytest_cache/
+
+# Secretos y configuracion local
+.env
+iniciar_control_pe_v8*.bat
+
+# Documentos que suben los estudiantes (datos personales)
+aplicacion/estaticos/imagenes/subidas/*
+!aplicacion/estaticos/imagenes/subidas/.gitkeep
